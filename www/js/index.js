@@ -21,29 +21,32 @@ var app = {
     initialize: function () {
 
         $(function(){
-            $('#mainContent').load('../sites/home.html', function () {
-                $('#btnNew').click(function () {
-                    $('#mainContent').load('../sites/form.html', function () {
-                        $('.timepicker').timepicker();
-                        $('#btnStart').click(function () {
-                            function save_form() {
-                                var myTime = $('#myTime').val();
-                                var myBattery = $('#myBattery').val();
-                                console.log(myTime);
-                                console.log(myBattery);
-                            }
-                            $('#mainContent').load('../sites/overview.html', function () {
-                                
+
+            loadAppContent();
+
+            function loadAppContent(){
+                $('#mainContent').load('../sites/home.html', function () {
+                    $('#btnNew').click(function () {
+                        $('#mainContent').load('../sites/form.html', function () {
+                            $('#btnStart').click(function () {
+                                function save_form() {
+                                    var myTime = $('#myTime').val();
+                                    var myBattery = $('#myBattery').val();
+                                    console.log(myTime);
+                                    console.log(myBattery);
+                                }
+                                $('#mainContent').load('../sites/overview.html', function () {
+                                    
+                                });
                             });
-                        });
-                        $('#btnCancel').click(function () {
-                            $('#mainContent').load('../sites/home.html', function () {
-    
+                            $('#btnCancel').click(function () {
+                                loadAppContent();
                             });
                         });
                     });
                 });
-            });
+            }
+            
         });    
     },
 

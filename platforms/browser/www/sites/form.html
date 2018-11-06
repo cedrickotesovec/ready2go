@@ -4,13 +4,19 @@
 <div class="content-form">
   <form id="myform">
     <div class="row">
-      <div class="input-field inline">
-        <i class="material-icons prefix">access_time</i>
-        <input id="myTime" type="text" class="timepicker" required>
+      <div class="input-field inline-custom col s12 m6 l6">
+          <i class="material-icons prefix">access_time</i>
+          <input id="myHours" type="number" class="validate" min="0" max="24" required>
+          <label for="myHours">hours</label>
+      </div>
+      <div class="input-field inline-custom col s12 m6 l6">
+          <i class="material-icons prefix">access_time</i>
+          <input id="myMinutes" type="number" class="validate" min="0" max="59" required>
+          <label for="myMinutes">minutes</label>
       </div>
     </div>
     <div class="row">
-      <div class="input-field inline-custom">
+      <div class="input-field inline-custom col s12 m12 l12">
         <i class="material-icons prefix">battery_charging_full</i>
         <input id="myBattery" type="number" class="validate" min="1" max="100" required>
         <label for="battery">battery goal</label>
