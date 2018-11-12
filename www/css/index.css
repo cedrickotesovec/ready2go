@@ -46,6 +46,7 @@
     height: 30%;
 }
 
+/* für Querformat auf Mobile */
 @media only screen and (max-width: 500px) {
 
     .center > h1 {
@@ -57,6 +58,8 @@
     }
 }
 
+/* für Querformat auf Mobile */
+
 @media only screen and (max-height: 500px) {
 
     .center > h1 {
@@ -67,6 +70,8 @@
         margin-top: 10%;
     }
 }
+
+/* für Querformat auf Tablet */
 
 @media only screen and (min-width: 1000px) {
 
